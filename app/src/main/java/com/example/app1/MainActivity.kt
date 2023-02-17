@@ -21,9 +21,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var mLastName: String? = null
 
     // UI elements
-    private var mTvFirstName: TextView? = null
-    private var mTvMiddleName: TextView? = null
-    private var mTvLastName: TextView? = null
     private var mEtFirstName: EditText? = null
     private var mEtMiddleName: EditText? = null
     private var mEtLastName: EditText? = null
@@ -46,7 +43,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         mButtonCamera!!.setOnClickListener(this)
 
         // create fragment
-        mDisplayIntent = Intent(this, DisplayFragment::class.java)
+        mDisplayIntent = Intent(this, DisplayActivity::class.java)
     }
 
     override fun onClick(view: View) {
@@ -85,11 +82,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         .show()
                 } else {
                     // pass strings to new activity
-                    mDisplayIntent!!.putExtra("FN_DATA", mFirstName)
-                    mDisplayIntent!!.putExtra("LN_DATA", mLastName)
-                    startActivity(mDisplayIntent) //explicit intent
+                    mDisplayIntent!!.putExtra("FIRST_NAME", mFirstName)
+                    mDisplayIntent!!.putExtra("LAST_NAME", mLastName)
+                    startActivity(mDisplayIntent) // explicit intent
                 }
-
             }
         }
     }
