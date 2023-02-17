@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         mButtonSubmit!!.setOnClickListener(this)
         mButtonCamera!!.setOnClickListener(this)
 
-        // create fragment
+        // create intent for next page (activity) but don't start yet
         mDisplayIntent = Intent(this, DisplayActivity::class.java)
     }
 

@@ -2,6 +2,8 @@ package com.example.app1
 
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.view.View
+import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -27,6 +29,8 @@ class DisplayActivity : AppCompatActivity() {
 
         // set the text view with the received data
         message = mFirstName.plus(" ").plus(mLastName).plus(" is logged in!")
+
+        mTvMessage = findViewById<View>(R.id.tv_message) as TextView
         mTvMessage!!.text = message
     }
 }
