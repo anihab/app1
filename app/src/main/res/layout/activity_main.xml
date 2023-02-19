@@ -6,10 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+<!-- profile picture -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/ll_pfp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_pfp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_pfp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/ll_camera"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_pfp"
+            android:id="@+id/button_camera"
+            tools:text="@string/camera"
+            />
+    </LinearLayout>
+
+<!-- names -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_camera"
+        android:orientation="horizontal"
+        android:gravity="center"
         android:id="@+id/ll_first_name"
         >
         <TextView
@@ -24,7 +61,6 @@
             android:layout_height="48dp"
             android:id="@+id/et_first_name"
             android:inputType="textPersonName"
-            tools:text="Enter first name here"
             />
     </LinearLayout>
 
@@ -33,6 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/ll_first_name"
         android:orientation="horizontal"
+        android:gravity="center"
         android:id="@+id/ll_middle_name"
         >
         <TextView
@@ -42,13 +79,12 @@
             android:text="@string/middle_name"
             android:id="@+id/tv_middle_name"
             />
-
         <EditText
             android:id="@+id/et_middle_name"
             android:layout_width="310dp"
             android:layout_height="48dp"
             android:inputType="textPersonName"
-            tools:text="Enter middle name here" />
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -56,6 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/ll_middle_name"
         android:orientation="horizontal"
+        android:gravity="center"
         android:id="@+id/ll_last_name"
         >
         <TextView
@@ -71,40 +108,26 @@
             android:layout_width="310dp"
             android:layout_height="48dp"
             android:inputType="textPersonName"
-            tools:text="Enter last name here" />
+            />
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ll_last_name"
-        android:paddingTop="16dp"
-        android:id="@+id/tv_pfp"
-        android:text="@string/pfp"
-        />
+<!-- submit -->
 
-    <ImageView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_pfp"
-        android:contentDescription="@string/pfp"
-        android:id="@+id/iv_pfp"
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/iv_pfp"
-        android:id="@+id/button_camera"
-        tools:text="@string/camera"
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button_camera"
-        android:id="@+id/button_submit"
-        tools:text="@string/submit"
-        />
+        android:layout_below="@+id/ll_last_name"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/ll_submit"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_camera"
+            android:id="@+id/button_submit"
+            tools:text="@string/submit"
+            />
+    </LinearLayout>
 
 </RelativeLayout>
