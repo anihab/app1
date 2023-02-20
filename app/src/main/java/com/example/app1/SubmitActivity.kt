@@ -1,13 +1,11 @@
 package com.example.app1
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.View
-import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class DisplayActivity : AppCompatActivity() {
+class SubmitActivity : AppCompatActivity() {
     // strings
     private var mFirstName: String? = null
     private var mLastName: String? = null
@@ -18,14 +16,14 @@ class DisplayActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_display)
+        setContentView(R.layout.activity_submit)
 
         // get calling intent
         val receivedIntent = intent
 
         // retrieve data
-        mFirstName = receivedIntent.getStringExtra("FIRST_NAME")
-        mLastName = receivedIntent.getStringExtra("LAST_NAME")
+        mFirstName = receivedIntent.getStringExtra("FN_DATA")
+        mLastName = receivedIntent.getStringExtra("LN_DATA")
 
         // set the text view with the received data
         message = mFirstName.plus(" ").plus(mLastName).plus(" is logged in!")

@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/iv_pfp"
             android:id="@+id/button_camera"
-            tools:text="@string/camera"
+            android:text="@string/camera"
             />
     </LinearLayout>
 
@@ -126,7 +126,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/button_camera"
             android:id="@+id/button_submit"
-            tools:text="@string/submit"
+            android:text="@string/submit"
             />
     </LinearLayout>
 
