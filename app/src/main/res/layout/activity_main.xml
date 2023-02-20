@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     tools:context=".MainActivity">
 
 <!-- profile picture -->
@@ -13,12 +14,12 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:id="@+id/ll_pfp"
-        >
+        android:id="@+id/ll_pfp">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/iv_pfp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_default_pfp"
             />
     </LinearLayout>
 
@@ -28,13 +29,12 @@
         android:layout_below="@+id/ll_pfp"
         android:orientation="horizontal"
         android:gravity="center"
-        android:id="@+id/ll_camera"
+        android:id="@+id/ll_camera_button"
         >
         <Button
+            android:id="@+id/button_camera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/iv_pfp"
-            android:id="@+id/button_camera"
             android:text="@string/camera"
             />
     </LinearLayout>
@@ -44,7 +44,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ll_camera"
+        android:layout_below="@id/ll_camera_button"
         android:orientation="horizontal"
         android:gravity="center"
         android:id="@+id/ll_first_name"
@@ -119,14 +119,15 @@
         android:layout_below="@+id/ll_last_name"
         android:orientation="horizontal"
         android:gravity="center"
+        android:padding="10dp"
         android:id="@+id/ll_submit"
         >
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/button_camera"
-            android:id="@+id/button_submit"
             android:text="@string/submit"
+            android:id="@+id/button_submit"
             />
     </LinearLayout>
 
